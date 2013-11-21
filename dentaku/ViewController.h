@@ -10,26 +10,17 @@
 
 @interface ViewController :
     UIViewController{
-        IBOutlet UIButton *clearbtn;
-        /*IBOutlet UIButton *equalbtn;
-        IBOutlet UIButton *plusbtn;
-        IBOutlet UIButton *minusbtn;
-        IBOutlet UIButton *shobtn;
-        IBOutlet UIButton *sekibtn;
-        IBOutlet UIButton *shosubtn;*/
+        IBOutlet UIButton *equalbtn;
         IBOutlet UILabel *labellbl;
 
         BOOL startInput;
+        int currentValue;
+        int operation;
     }
 
 - (IBAction)clearbtn_down:(id)sender;
-/*- (IBAction)equalbtn_down:(id)sender;
-- (IBAction)plusbtn_down:(id)sender;
-- (IBAction)minusbtn_down:(id)sender;
-- (IBAction)shobtn_down:(id)sender;
-- (IBAction)sekibtn_down:(id)sender;
-- (IBAction)shosubtn_down:(id)sender;
-*/
+- (IBAction)equalbtn_down:(id)sender;
+- (IBAction)opbtn_down:(id)sender;
 - (IBAction)numberbtn_down:(id)sender;
 
 

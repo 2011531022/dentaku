@@ -21,6 +21,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     startInput = YES;
+    currentValue = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +36,7 @@
 }
 
 - (IBAction)numberbtn_down:(id)sender {
-    UIButton *b = (UIButton *)sender;
+    UIButton *b = (UIButton *) sender;
     
     if( startInput ){
         if( b.tag == 0 )return;
@@ -45,4 +46,25 @@
         labellbl.text = [NSString stringWithFormat:@"%@%d", labellbl.text, b.tag];
     }
 }
+
+- (IBAction)equalbtn_down:(id)sender{
+    if( operation == 0 ){
+        currentValue += [labellbl.text intValue];
+    } else if ( operation == 1){
+        currentValue -= [labellbl.text intValue];
+    }
+
+    labellbl.text = [NSString stringWithFormat:@"%d", currentValue];
+    startInput = YES;
+
+}
+
+- (IBAction)opbtn_down:(id)sender{
+    UIButton *b = (UIButton *)sender;
+    currentValue = [labellbl.text intValue];
+    operation = b.tag;
+    startInput = YES;
+}
+
+
 @end
