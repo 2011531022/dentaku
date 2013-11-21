@@ -34,10 +34,7 @@
     startInput = YES;
 }
 
-- (IBAction)zerobtn_down:(id)sender {
-}
-
-- (IBAction)itibtn_down:(id)sender {
+- (IBAction)numberbtn_down:(id)sender {
     UIButton *b = (UIButton *)sender;
     
     if( startInput ){
@@ -47,47 +44,5 @@
     } else {
         labellbl.text = [NSString stringWithFormat:@"%@%d", labellbl.text, b.tag];
     }
-}
-
-- (IBAction)nibtn_down:(id)sender {
-}
-
-- (IBAction)sanbtn_down:(id)sender {
-}
-
-- (IBAction)yonbtn_down:(id)sender {
-}
-
-- (IBAction)gobtn_down:(id)sender {
-}
-
-- (IBAction)rokubtn_down:(id)sender {
-}
-
-- (IBAction)nanabtn_down:(id)sender {
-}
-
-- (IBAction)hatibtn_down:(id)sender {
-}
-
-- (IBAction)kyubtn_down:(id)sender {
-}
-
-- (IBAction)equalbtn_down:(id)sender {
-}
-
-- (IBAction)plusbtn_down:(id)sender {
-}
-
-- (IBAction)minusbtn_down:(id)sender {
-}
-
-- (IBAction)shobtn_down:(id)sender {
-}
-
-- (IBAction)sekibtn_down:(id)sender {
-}
-
-- (IBAction)shosubtn_down:(id)sender {
 }
 @end
