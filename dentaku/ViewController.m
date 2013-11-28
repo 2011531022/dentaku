@@ -13,7 +13,6 @@
 @end
 
 
-
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -37,10 +36,10 @@
 
 - (IBAction)numberbtn_down:(id)sender {
     UIButton *b = (UIButton *) sender;
-    
     if( startInput ){
-        if( b.tag == 0 )return;
-        labellbl.text = [NSString stringWithFormat:@"%d", b.tag];
+        if( b.tag == 0 )return;{
+            labellbl.text = [NSString stringWithFormat:@"%d",b.tag];
+        }
         startInput = NO;
     } else {
         labellbl.text = [NSString stringWithFormat:@"%@%d", labellbl.text, b.tag];
@@ -48,28 +47,44 @@
 }
 
 - (IBAction)equalbtn_down:(id)sender{
+    NSLog(@"currentValue:%f",currentValue);
+    NSLog(@"labelValue:%f",[labellbl.text doubleValue]);
     if( operation == 0 ){
-        currentValue += [labellbl.text intValue];
+        currentValue += [labellbl.text doubleValue];
     } else if ( operation == 1){
-        currentValue -= [labellbl.text intValue];
+        currentValue -= [labellbl.text doubleValue];
     } else if ( operation == 2){
-        currentValue *= [labellbl.text intValue];
+        currentValue *= [labellbl.text doubleValue];
     } else if ( operation == 3){
-        currentValue /= [labellbl.text intValue];
+        currentValue /= [labellbl.text doubleValue];
     }
     
-    
-    labellbl.text = [NSString stringWithFormat:@"%d", currentValue];
+    labellbl.text = [NSString stringWithFormat:@"%g", currentValue];
     startInput = YES;
 
 }
 
 - (IBAction)opbtn_down:(id)sender{
     UIButton *b = (UIButton *)sender;
-    currentValue = [labellbl.text intValue];
+    currentValue = [labellbl.text doubleValue];
     operation = b.tag;
     startInput = YES;
 }
 
+- (IBAction)pointbtn_down:(id)sender{
+    UIButton *b = (UIButton *) sender;
+    if( b.tag == 10 ){
+        labellbl.text = [NSString stringWithFormat:@"%@%s", labellbl.text, "."];
+        
+    startInput = NO;
+    } else {
+        if( b.tag == 10 ){
+            NSRange searchResult = [labellbl.text rangeOfString:@"."];
+                if( searchResult.location == NSNotFound ){
+                    labellbl.text = [NSString stringWithFormat:@"%@%@",labellbl.text,@"."];
+                }
+        }
+    }
+}
 
 @end

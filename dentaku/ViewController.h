@@ -14,14 +14,15 @@
         IBOutlet UILabel *labellbl;
 
         BOOL startInput;
-        int currentValue;
+        double currentValue;
         int operation;
+        int decimalPoint;
     }
 
 - (IBAction)clearbtn_down:(id)sender;
 - (IBAction)equalbtn_down:(id)sender;
 - (IBAction)opbtn_down:(id)sender;
 - (IBAction)numberbtn_down:(id)sender;
-
+- (IBAction)pointbtn_down:(id)sender;
 
 @end

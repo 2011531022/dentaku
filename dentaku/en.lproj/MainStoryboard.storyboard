@@ -113,7 +113,7 @@
                                     <action selector="numberbtn_down:" destination="2" eventType="touchUpInside" id="Xac-1E-cQo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op0-TR-AhS">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op0-TR-AhS">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title=".">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -122,6 +122,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pointbtn_down:" destination="2" eventType="touchUpInside" id="zB1-IW-Abx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ub-NG-9G1">
                                 <constraints>
@@ -168,7 +171,7 @@
                                     <action selector="numberbtn_down:" destination="2" eventType="touchUpInside" id="5Nv-5x-nZP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8m-1c-7Eb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8m-1c-7Eb" colorLabel="IBBuiltInLabel-Red">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="WPB-C7-D8J"/>
                                 </constraints>
@@ -255,13 +258,12 @@
                                     <action selector="clearbtn_down:" destination="2" eventType="touchUpInside" id="C5D-un-IH4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHN-Et-Npn">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHN-Et-Npn" colorLabel="IBBuiltInLabel-Red">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="252" id="Bu4-Fa-cAw"/>
                                     <constraint firstAttribute="height" constant="65" id="dcn-pS-6UF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -337,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="105"/>
+            <point key="canvasLocation" x="-458" y="-34"/>
         </scene>
     </scenes>
     <classes>
@@ -351,6 +353,7 @@
                 <relationship kind="action" name="equalbtn_down:"/>
                 <relationship kind="action" name="numberbtn_down:"/>
                 <relationship kind="action" name="opbtn_down:"/>
+                <relationship kind="action" name="pointbtn_down:"/>
                 <relationship kind="outlet" name="equalbtn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="labellbl" candidateClass="UILabel"/>
             </relationships>
