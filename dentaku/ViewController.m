@@ -52,8 +52,13 @@
         currentValue += [labellbl.text intValue];
     } else if ( operation == 1){
         currentValue -= [labellbl.text intValue];
+    } else if ( operation == 2){
+        currentValue *= [labellbl.text intValue];
+    } else if ( operation == 3){
+        currentValue /= [labellbl.text intValue];
     }
-
+    
+    
     labellbl.text = [NSString stringWithFormat:@"%d", currentValue];
     startInput = YES;
 
